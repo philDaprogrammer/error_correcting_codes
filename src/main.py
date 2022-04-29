@@ -3,23 +3,21 @@
 from code import code
 
 def dumpMatrix(M: list): 
-    for row in M: 
-        print(row)
+    for row in M:  
+        print("[ ", end="")
 
-def sum_vector(v: list): 
-    s = 0 
+        for elem in row: 
+            print("{:>2} ".format(elem), end="")
 
-    for elem in v: 
-        s += elem
-
-    return s
+        print(" ]")
 
 def main():
-    c        = code(11, 4)
+    c        = code(16, 4)
     codeword = c.encode([1,2,3,4])    
+    temp     = codeword.copy() 
 
-    print(codeword)
-
+    dumpMatrix(c.G)
+    print("\n" + str(codeword))
 
 if __name__ == "__main__":
     main()
