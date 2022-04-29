@@ -10,11 +10,10 @@ def dumpMatrix(M: list):
             print("{:>2} ".format(elem), end="")
 
         print(" ]")
-        
+
 def main():
     c        = code(16, 4)
     codeword = c.encode([1,2,3,4])    
-    temp     = codeword.copy() 
 
     dumpMatrix(c.G)
     print("\n" + str(codeword))
